@@ -40,6 +40,13 @@
                 android:inputType="text" />
 
             <TextView
+                android:id="@+id/tv_Kc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kč" />
+
+            <TextView
                 android:id="@+id/textView_vaha1"
                 android:layout_width="69dp"
                 android:layout_height="match_parent"
@@ -53,6 +60,13 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tv_Kg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="g" />
         </LinearLayout>
 
         <LinearLayout
@@ -65,7 +79,7 @@
                 android:layout_width="69dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Ceba druhá" />
+                android:text="Cena druhá" />
 
             <EditText
                 android:id="@+id/editText_ValueCena2"
@@ -74,6 +88,13 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tv_Kc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kč" />
 
             <TextView
                 android:id="@+id/textView_vaha2"
@@ -90,6 +111,13 @@
                 android:ems="10"
                 android:inputType="textPersonName" />
 
+            <TextView
+                android:id="@+id/tv_Kg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="g" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -102,6 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="#CDDC39"
                 android:text="Počítej" />
 
         </LinearLayout>

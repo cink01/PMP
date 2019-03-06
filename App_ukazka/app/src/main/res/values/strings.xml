@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Spočítej a zaplať méňe</string>
+    <string name="toast_num_chyba">Zadejte jen čísla</string>
 </resources>
