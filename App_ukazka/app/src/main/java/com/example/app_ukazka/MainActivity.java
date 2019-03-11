@@ -28,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
                         TextView porovnani=(TextView)findViewById(R.id.textView_Porovnani);
                         TextView cenakg1=(TextView)findViewById(R.id.textView_CenaKg1);
                         TextView cenakg2=(TextView)findViewById(R.id.textView_CenaKg2);
+
+                        //využití třídy zboží
+                        Zbozi prvni = new Zbozi(Float.parseFloat(cena1.getText().toString()),Float.parseFloat(vaha1.getText().toString()));
+                        Zbozi druhy = new Zbozi(Float.parseFloat(cena2.getText().toString()),Float.parseFloat(vaha2.getText().toString()));
+                        porovnani.setText(Zbozi.Porovnej(prvni,druhy));
+                        cenakg1.setText("Cena prvního na kg je: "+prvni.toString());
+                        cenakg2.setText("Cena druhého na kg je: "+druhy.toString());
+                      /*
                         float c1=Float.parseFloat(cena1.getText().toString());
                         float c2=Float.parseFloat(cena2.getText().toString());
                         float v1=Float.parseFloat(vaha1.getText().toString());
@@ -43,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                         else
                         {
                             porovnani.setText("Druhý je levnější");
-                        }
+                        }*/
                     }
                     catch (NumberFormatException e)
                     {
