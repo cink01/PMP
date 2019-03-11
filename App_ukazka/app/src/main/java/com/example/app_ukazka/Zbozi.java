@@ -5,17 +5,11 @@ public class Zbozi {
     float vaha;
     float cenaKg;
 
-    public float getCenaKg() {
-        return cenaKg;
-    }
+    public float getCenaKg() { return cenaKg; }
 
-    public void setCenaKg(float cenaKg) {
-        this.cenaKg = cenaKg;
-    }
+    public void setCenaKg(float cenaKg) { this.cenaKg = cenaKg; }
 
-    public void setCena(float cena) {
-        this.cena = cena;
-    }
+    public void setCena(float cena) { this.cena = cena; }
 
     public void setVaha(float vaha) {
         this.vaha = vaha;
@@ -32,25 +26,19 @@ public class Zbozi {
     public Zbozi(float cena, float vaha) {
         this.cena = cena;
         this.vaha = vaha;
-        this.cenaKg = Calc(cena,vaha);
+        this.cenaKg = Calc();
     }
+
     @Override
-    public String toString() {
+    public String toString() { return cenaKg + " Kč"; }
 
-        float tmp = Calc(cena,vaha);
-        return tmp+" Kč";
-    }
+    public float Calc() {return ((1000 * this.cena) / this.vaha);}
 
-    public float Calc(float cena, float vaha)
-    {
-            return ((1000*cena)/vaha);
-    }
-
-    public static String Porovnej(Zbozi prvni, Zbozi druhe)
-    {
-        if(prvni.cenaKg<druhe.cenaKg)
-            return "První je levnější";
-        else
-            return "Druhý je levnější";
+    public static String Porovnej(Zbozi prvni, Zbozi druhe) {
+        if (prvni.cenaKg < druhe.cenaKg)
+            return "První zboží je levnější.";
+        if (prvni.cenaKg > druhe.cenaKg)
+            return "Druhý zboží je levnější.";
+        return "Obě zboží mají stejnou cenu za kilogram.";
     }
 }
