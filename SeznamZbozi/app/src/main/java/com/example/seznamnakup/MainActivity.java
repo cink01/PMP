@@ -28,22 +28,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
         try{
         Intent i =getIntent();
         ListView lv=(ListView)findViewById(R.id.listview_seznam);
         Zbozi z = (Zbozi) i.getSerializableExtra("Zbozi");
         ArrayList<Zbozi> zbozis=new ArrayList<>() ;
         zbozis.add(z);
-
         Refresh();
-
         }
         catch (Exception ex){}
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        
         //  ArrayAdapter aa=new ArrayAdapter(R.layout.simple_list_item_l.arrayList);
        /* EditText naz = (EditText)findViewById(R.id.et_nazev);
         EditText cen = (EditText)findViewById(R.id.et_cena);
