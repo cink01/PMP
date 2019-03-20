@@ -9,12 +9,14 @@ String nazev;
 float cena;
 float pocet;
 float celkem;
+boolean koupeno;
 
     public Zbozi(String nazev, float cena, float pocet) {
         this.nazev = nazev;
         this.cena = cena;
         this.pocet = pocet;
         this.celkem=CalcCelkem();
+        this.koupeno=false;
     }
 
     public float CalcCelkem()
@@ -46,19 +48,29 @@ float celkem;
         this.pocet = pocet;
     }
 
-    public float getVaha() {
-        return vaha;
+    public float getCelkem() {return celkem;}
+
+    public void setCelkem(float celkem) {this.celkem = celkem; }
+
+    public boolean isKoupeno() {return koupeno;}
+
+    public void setKoupeno(boolean koupeno) {this.koupeno = koupeno; }
+
+    public void Koupit(){
+        this.koupeno=this.koupeno!=true;
     }
 
-    public void setVaha(float vaha) {
-        this.vaha = vaha;
-    }
+    @Override
+    public String toString() {
+        String k;
+        if(koupeno!=true)
+            k="nekoupeno";
+        else
+            k="Koupeno";
 
-    public float getCenaKg() {
-        return cenaKg;
-    }
-
-    public void setCenaKg(float cenaKg) {
-        this.cenaKg = cenaKg;
+        return "nazev='" + nazev + "\n" +
+                ", cena=" + cena +" Kč\n"+
+                ", pocet=" + pocet + " ks\n"+
+                ", koupeno=" + k ;
     }
 }
