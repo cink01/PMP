@@ -1,6 +1,9 @@
 package com.example.seznamnakup;
 
-public class Zbozi {
+import java.io.Serializable;
+
+public class Zbozi implements Serializable
+{
 
 String nazev;
 float cena;
