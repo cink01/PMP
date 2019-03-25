@@ -21,7 +21,6 @@ android {
                     output->
                         def name = "PočítačCen_version${variant.versionName}{${variant.versionCode}}.apk"
                         output.outputFileName=name
-
                 }
         }
     }
