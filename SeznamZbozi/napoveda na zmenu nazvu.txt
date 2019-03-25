@@ -1,1 +1,0 @@
-https://stackoverflow.com/questions/28249036/app-release-apk-how-to-change-this-default-generated-apk-name
