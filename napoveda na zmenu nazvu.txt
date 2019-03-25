@@ -1,1 +1,12 @@
-https://stackoverflow.com/questions/28249036/app-release-apk-how-to-change-this-default-generated-apk-name
+        /app/build.gradle
+        pod release
+
+        applicationVariants.all{
+            variant ->
+                variant.outputs.each{
+                    output->
+                        def name = "NazevApplikace_version${variant.versionName}{${variant.versionCode}}.apk"
+                        output.outputFileName=name
+
+                }
+        }
