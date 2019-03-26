@@ -5,24 +5,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
-public class PridaniActivity extends AppCompatActivity
-{
+import java.util.concurrent.ExecutionException;
+
+public class PridaniActivity extends AppCompatActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pridani);
     }
 
-    public void onClickProvedPridani(View view)
-    {
-        EditText nazev = (EditText) findViewById(R.id.editText_nazev);
-        EditText pocet = (EditText) findViewById(R.id.editText_pocet);
-        EditText cena = (EditText) findViewById(R.id.editText_cena);
-        Zbozi tmp = new Zbozi(nazev.getText().toString(), Float.parseFloat(cena.getText().toString()), Float.parseFloat(pocet.getText().toString()));
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("Zbozi", tmp);
-        startActivity(intent);
+    public void onClickProvedPridani(View view) {
+
+        try {
+            EditText nazev = (EditText) findViewById(R.id.editText_nazev);
+            EditText pocet = (EditText) findViewById(R.id.editText_pocet);
+            EditText cena = (EditText) findViewById(R.id.editText_cena);
+            Zbozi tmp = new Zbozi(nazev.getText().toString(), Float.parseFloat(cena.getText().toString()), Float.parseFloat(pocet.getText().toString()));
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("Zbozi", tmp);
+            startActivity(intent);
+        } catch (Exception ex) {
+            Toast.makeText(this, "Položky nesmí být prázdné", Toast.LENGTH_LONG).show();
+        }
     }
 }
