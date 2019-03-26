@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         try {
             Intent i = getIntent();
-            ListView lv = (ListView) findViewById(R.id.listview_seznam);
+            ListView lv = findViewById(R.id.listview_seznam);
             Zbozi z = (Zbozi) i.getSerializableExtra("Zbozi");
             Zbozi x = new Zbozi(z.nazev, z.cena, z.pocet);
             zbozis.add(x);
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Refresh() {
-        lv = (ListView) findViewById(R.id.listview_seznam);
+        lv = findViewById(R.id.listview_seznam);
         ArrayAdapter<Zbozi> arrayAdapter = new ArrayAdapter<Zbozi>(this, android.R.layout.simple_list_item_1, zbozis);
         lv.setAdapter(arrayAdapter);
     }

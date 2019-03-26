@@ -19,9 +19,9 @@ public class PridaniActivity extends AppCompatActivity {
     public void onClickProvedPridani(View view) {
 
         try {
-            EditText nazev = (EditText) findViewById(R.id.editText_nazev);
-            EditText pocet = (EditText) findViewById(R.id.editText_pocet);
-            EditText cena = (EditText) findViewById(R.id.editText_cena);
+            EditText nazev = findViewById(R.id.editText_nazev);
+            EditText pocet = findViewById(R.id.editText_pocet);
+            EditText cena = findViewById(R.id.editText_cena);
             Zbozi tmp = new Zbozi(nazev.getText().toString(), Float.parseFloat(cena.getText().toString()), Float.parseFloat(pocet.getText().toString()));
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra("Zbozi", tmp);
@@ -29,5 +29,10 @@ public class PridaniActivity extends AppCompatActivity {
         } catch (Exception ex) {
             Toast.makeText(this, "Položky nesmí být prázdné", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public void onClickUkonci(View view){
+        finish();
+        super.onBackPressed();
     }
 }

@@ -9,7 +9,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +27,7 @@
 
             <EditText
                 android:id="@+id/editText_nazev"
-                android:layout_width="wrap_content"
+                android:layout_width="274dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
@@ -51,6 +53,13 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ks" />
         </LinearLayout>
 
         <LinearLayout
@@ -72,6 +81,13 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kč" />
         </LinearLayout>
 
         <LinearLayout
@@ -92,6 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onClickUkonci"
                 android:text="Zavřit" />
         </LinearLayout>
     </LinearLayout>
