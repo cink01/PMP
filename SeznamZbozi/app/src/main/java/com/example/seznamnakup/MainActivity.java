@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    public ArrayList<Zbozi> zbozis= new ArrayList<>();
+    public List<Zbozi> zbozis= DataHolder.getInstance().zbozis;
     ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
