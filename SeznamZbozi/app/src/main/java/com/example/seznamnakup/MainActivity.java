@@ -3,6 +3,9 @@ package com.example.seznamnakup;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -20,6 +23,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+       try {
+           MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu_items,menu);
+
+        }
+        catch (Exception ex) {}
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        if (id == R.id.menu_pridat) {
+            Intent intent = new Intent(this, PridaniActivity.class);
+            startActivity(intent);
+
+            return true;
+        }
+        if (id == R.id.menu_celkem) {
+
+
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

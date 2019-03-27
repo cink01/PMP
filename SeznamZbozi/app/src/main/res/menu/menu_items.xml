@@ -3,10 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/menu_pridat"
         android:onClick="onClickPridej"
         android:title="Přidat" />
     <item
         android:onClick="onClickPridej"
         android:title="Upravit" />
-    <item android:title="Celkem" />
+    <item
+        android:id="@+id/menu_celkem"
+        android:title="Celkem" />
 </menu>
