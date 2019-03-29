@@ -17,6 +17,6 @@ public class DanActivity extends AppCompatActivity {
         EditText zadan = (EditText)findViewById(R.id.editText_zadan);
         EditText sazba = (EditText)findViewById(R.id.editText_sazba);
         EditText vysl = (EditText)findViewById(R.id.editText_sDPH);
-        vysl.setText(Double.toString(((Float.parseFloat(zadan.getText().toString()))*(Float.parseFloat(sazba.getText().toString())/100.0))));
+        vysl.setText(Double.toString((Float.parseFloat(zadan.getText().toString()))+((Float.parseFloat(zadan.getText().toString()))*(Float.parseFloat(sazba.getText().toString())/100.0))));
     }
 }
