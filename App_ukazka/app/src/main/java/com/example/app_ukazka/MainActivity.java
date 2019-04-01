@@ -33,20 +33,6 @@ public class MainActivity extends AppCompatActivity {
                     porovnani.setText(Zbozi.Porovnej(prvni, druhy));//zavolaní statické funkce, která vrátí co je ze dou zboží levnější
                     cenakg1.setText("Cena prvního na kg je: " + prvni.toString());
                     cenakg2.setText("Cena druhého na kg je: " + druhy.toString());
-                      /*
-                        float c1=Float.parseFloat(cena1.getText().toString());
-                        float c2=Float.parseFloat(cena2.getText().toString());
-                        float v1=Float.parseFloat(vaha1.getText().toString());
-                        float v2=Float.parseFloat(vaha2.getText().toString());
-                        float x1=(1000*c1)/v1;
-                        float x2=(1000*c2)/v2;
-                        cenakg1.setText("Cena prvního na kg je: "+ Float.toString(x1));
-                        cenakg2.setText("Cena druhého na kg je: "+ Float.toString(x2));
-                        if(x1>x2)
-                            porovnani.setText("První je levnější");
-                        else
-                            porovnani.setText("Druhý je levnější");
-                      */
                 } catch (NumberFormatException e) {
                     Toast.makeText(getApplicationContext(), getString(R.string.toast_num_chyba), Toast.LENGTH_LONG).show();
                 }

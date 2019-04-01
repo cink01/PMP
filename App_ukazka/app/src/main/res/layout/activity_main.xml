@@ -8,15 +8,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="29dp"
-            android:orientation="vertical"
-            tools:background="@color/colorPrimaryDark" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,7 +25,6 @@
                 android:layout_width="69dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
                 android:text="Cena prvni" />
 
             <EditText
@@ -125,47 +121,49 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button_pocitej"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="189dp"
                 android:layout_weight="1"
-                android:background="#CDDC39"
-                android:text="Počítej" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button_pocitej"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Počítej" />
+
+                <TextView
+                    android:id="@+id/textView_vysledek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Výsledek" />
+
+                <TextView
+                    android:id="@+id/textView_Porovnani"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView_CenaKg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView_CenaKg2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="124dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView_vysledek"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Výsledek" />
-
-            <TextView
-                android:id="@+id/textView_Porovnani"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView_CenaKg1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView_CenaKg2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

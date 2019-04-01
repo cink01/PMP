@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+<<<<<<< HEAD
        try {
            MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu_items,menu);
@@ -51,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+=======
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu_items,menu);
+        return true;
+>>>>>>> 6fccfe8ce38073dcafd05ff757f98dfc44a8941c
     }
 
     @Override
