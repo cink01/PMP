@@ -23,14 +23,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-<<<<<<< HEAD
+    public boolean onCreateOptionsMenu(Menu menu ) {
        try {
            MenuInflater inflater=getMenuInflater();
+
         inflater.inflate(R.menu.menu_items,menu);
+
 
         }
         catch (Exception ex) {}
@@ -43,20 +45,10 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.menu_pridat) {
             Intent intent = new Intent(this, PridaniActivity.class);
             startActivity(intent);
-
-            return true;
-        }
-        if (id == R.id.menu_celkem) {
-
-
             return true;
         }
         return super.onOptionsItemSelected(item);
-=======
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.menu_items,menu);
-        return true;
->>>>>>> 6fccfe8ce38073dcafd05ff757f98dfc44a8941c
+
     }
 
     @Override
