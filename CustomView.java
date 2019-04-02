@@ -1,4 +1,5 @@
-package com.example.seznamnakup;
+/*https://medium.com/mindorks/custom-array-adapters-made-easy-b6c4930560dd	- mozna lepsi reseni */
+
 
 private void Refresh() 
 {
