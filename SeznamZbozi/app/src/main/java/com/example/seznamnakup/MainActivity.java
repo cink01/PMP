@@ -15,32 +15,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
-    public List<Zbozi> zbozis = DataHolder.getInstance().zbozis;
+    public List<Zbozi> zbozis = Singleton.getInstance().zbozis;
     ListView lv;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu ) {
        try {
            MenuInflater inflater=getMenuInflater();
-
         inflater.inflate(R.menu.menu_items,menu);
-
-
         }
         catch (Exception ex) {}
         return super.onCreateOptionsMenu(menu);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         int id = item.getItemId();
         if (id == R.id.menu_pridat) {
             Intent intent = new Intent(this, PridaniActivity.class);
@@ -48,14 +40,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-
     }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -69,20 +54,14 @@ public class MainActivity extends AppCompatActivity {
         }
         catch (Exception ex) {}
     }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
     public void onClickPridej(View view) {
         Intent intent = new Intent(this, PridaniActivity.class);
         startActivity(intent);
     }
-
     private void Refresh() {
         lv = findViewById(R.id.listview_seznam);
-        ArrayAdapter<Zbozi> arrayAdapter = new ArrayAdapter<Zbozi>(this, android.R.layout.simple_list_item_1, zbozis);
+        ArrayAdapter<Zbozi> arrayAdapter =
+                new ArrayAdapter<Zbozi>(this, android.R.layout.simple_list_item_1, zbozis);
         lv.setAdapter(arrayAdapter);
     }
 }
