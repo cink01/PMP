@@ -15,13 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    public List<Zbozi> zbozis = Singleton.getInstance().zbozis;
-    ListView lv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public List<Zbozi> zbozis = Singleton.getInstance().zbozis;
+    ListView lv;
     @Override
     public boolean onCreateOptionsMenu(Menu menu ) {
        try {
