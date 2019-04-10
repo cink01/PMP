@@ -1,0 +1,4 @@
+Pøedìlat otevírání nového intentu 
+Pøidat tlaèítko do listView
+Zapracovat TabPage do app
+Zapracovat XML nacteni souboru
