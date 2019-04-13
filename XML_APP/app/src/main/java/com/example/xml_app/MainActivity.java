@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             parserFactory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = parserFactory.newPullParser();
-            InputStream is = getAssets().open("zbozi.xml");
+            InputStream is =  this.getResources().openRawResource(R.raw.zbozi);
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
             parser.setInput(is, null);
 
