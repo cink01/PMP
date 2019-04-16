@@ -1,4 +1,3 @@
-Pøedìlat otevírání nového intentu 
-Pøidat tlaèítko do listView
-Zapracovat TabPage do app
-Zapracovat XML nacteni souboru
+zrusit otevírání nového intentu a nastavit tam vraceni do predesleho
+Pridat tlacítko ke kazde polozce do listView
+Zapracovat TabPage do app - mozna vice seznamu?
