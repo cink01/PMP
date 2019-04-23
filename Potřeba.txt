@@ -1,3 +1,4 @@
 zrusit otevírání nového intentu a nastavit tam vraceni do predesleho
 Pridat tlacítko ke kazde polozce do listView
 Zapracovat TabPage do app - mozna vice seznamu?
+SQLite na ukladani dat misto arraylistu
