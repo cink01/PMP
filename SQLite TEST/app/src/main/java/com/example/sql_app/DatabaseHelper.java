@@ -12,14 +12,16 @@ public class DatabaseHelper extends SQLiteOpenHelper    {
     public static final String TABLE_NAME="zbozi_data";
     public static final String COL1 = "ID";
     public static final String COL2 = "NAZEV";
- //   public static final String COL3 = "CENA";
+    public static final String COL3 = "CENA";
+    public static final String COL4 = "POCET";
+
 
     public DatabaseHelper(Context context){super(context,DATABASE_NAME,null,1);}
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable="CREATE TABLE "+ TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "NAZEV TEXT)";
+                "NAZEV TEXT, CENA FLOAT, POCET FLOAT)";
         db.execSQL(createTable);
     }
 
@@ -29,11 +31,12 @@ public class DatabaseHelper extends SQLiteOpenHelper    {
         db.execSQL(t+TABLE_NAME);
     }
 
-    public boolean AddData(String nazev){
+    public boolean AddData(Zbozi zbozi){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues= new ContentValues();
-        contentValues.put(COL2, nazev);
- //       contentValues.put(COL3, zbozi.cena);
+        contentValues.put(COL2, zbozi.nazev);
+        contentValues.put(COL3, zbozi.cena);
+  //      contentValues.put(COL4, zbozi.pocet);
 
         long result = db.insert(TABLE_NAME,null,contentValues);
         if(result ==-1){
@@ -46,8 +49,9 @@ public class DatabaseHelper extends SQLiteOpenHelper    {
 
     public Cursor getListContents(){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor data = db.rawQuery("SELECT * FROM "+ TABLE_NAME,null);
-        return data;
+        /*Cursor data = db.rawQuery("SELECT * FROM "+ TABLE_NAME,null);
+        return data;*/
+        return db.rawQuery("SELECT * FROM "+ TABLE_NAME,null);
     }
 
 }

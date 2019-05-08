@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void AddDat(String newEntry){
-        boolean insertdata = myDB.AddData(newEntry);  //(/*new Zbozi(*/newEntry/*,15,0)*/);
+        boolean insertdata = myDB.AddData(new Zbozi(newEntry, 23.2f,12f));
         if(insertdata==true)
         {
             Toast.makeText(MainActivity.this,"FINITO",Toast.LENGTH_LONG).show();

@@ -25,14 +25,14 @@ public class ViewListContents extends AppCompatActivity {
 
         myDB = new DatabaseHelper(this);
 
-        ArrayList<String/*Zbozi*/> list = new ArrayList<>();
+        ArrayList<Zbozi> list = new ArrayList<>();
         Cursor data = myDB.getListContents();
         if(data.getCount()==0){
             Toast.makeText(this,"prazdna db",Toast.LENGTH_LONG).show();
         }
         else{
             while(data.moveToNext()){
-                list.add(data.getString(1));  //(/*new Zbozi(*/data.getString(1)/*,data.getFloat(2),0)*/);
+                list.add(new Zbozi(data.getString(1),data.getFloat(2),/*data.getFloat(3)*/1));
                 ListAdapter listAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,list);
                 listView.setAdapter(listAdapter);
             }
