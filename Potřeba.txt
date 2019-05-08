@@ -1,4 +1,5 @@
-zrusit otev�r�n� nov�ho intentu a nastavit tam vraceni do predesleho
-Pridat tlac�tko ke kazde polozce do listView
-Zapracovat TabPage do app - mozna vice seznamu?
-SQLite na ukladani dat misto arraylistu
+zrusit otevírání nového intentu a nastavit tam vraceni do predesleho
+Pridat tlacítko ke kazde polozce do listView - možná nepotřebý
+Zapracovat TabPage do app - mozna vice seznamu? - potřeba vyzkoušet a implementovat
+XML přidat jako základ nějakýho listu - vyrobeno XML test připraven na implementaci
+SQLite na ukladani dat misto arraylistu - zkouším test app
