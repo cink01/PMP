@@ -17,11 +17,20 @@ import com.example.tabtest.ui.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private SectionsPagerAdapter mSectionsPageAdapter;
+    private ViewPager mViewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        mSectionsPageAdapter= new SectionsPagerAdapter(getSupportFragmentManager());
+        mViewPager= (ViewPager) findViewById(R.id.container);
+        setupViewPager(mViewPager);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
+        /*SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
@@ -34,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
+    }
+    private void setupViewPager(ViewPager viewPager){
+        SectionsPagerAdapter adapter;
+        adapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        adapter.AddFragment(new Tab1(),"Seznam");
+        adapter.AddFragment(new Tab2(),"Položky");
+ //      adapter.AddFragment(new Tab3_example(),"Vzor");
+
+
     }
 }
