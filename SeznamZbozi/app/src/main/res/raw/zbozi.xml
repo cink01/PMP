@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zbozis>
+	<zbozi>
+		<nazev>Mrkev</nazev>
+		<cena>15</cena>
+		<pocet>20</pocet>
+	</zbozi>
+		<zbozi>
+		<nazev>Jablko</nazev>
+		<cena>7</cena>
+		<pocet>14</pocet>
+	</zbozi>
+		<zbozi>
+		<nazev>Stul</nazev>
+		<cena>520</cena>
+		<pocet>1</pocet>
+	</zbozi>
+</zbozis>
